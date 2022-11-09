@@ -525,7 +525,7 @@ def config_parser():
                         help='frequency of weight ckpt saving')
     parser.add_argument("--i_testset", type=int, default=50000, 
                         help='frequency of testset saving')
-    parser.add_argument("--i_video",   type=int, default=50000, 
+    parser.add_argument("--i_video",   type=int, default=25, 
                         help='frequency of render_poses video saving')
 
     return parser
@@ -799,7 +799,7 @@ def train():
             }, path)
             print('Saved checkpoints at', path)
 
-        if i > 0:
+        if i%args.i_video==0 and i > 0:
             # Turn on testing mode
             with torch.no_grad():
                 rgbs, disps = render_path(render_poses, hwf, K, args.chunk, render_kwargs_test)
