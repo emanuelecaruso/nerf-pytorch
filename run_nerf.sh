@@ -14,15 +14,12 @@ ENVFILE=${SCRIPTPATH}"/env/bin/activate"
 #fi
 
 # Find python script
-if [ -f "$ENVFILE" ]; then
+if [ -f "$PYTHONSCRIPT" ]; then
     echo "Python script found"
 else 
     echo "$FILE does not exist."
     exit
 fi
-
-# Enter in virtual environment
-#source ${ENVFILE}
 
 # Install requirements
 #pip install -r requirements.txt
