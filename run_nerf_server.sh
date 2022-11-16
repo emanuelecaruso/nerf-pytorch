@@ -2,7 +2,7 @@
 SCRIPT=$(realpath "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 PYTHONSCRIPT=${SCRIPTPATH}"/run_nerf.py"
-CONFIGSFILE=${SCRIPTPATH}"/configs/lego.txt"
+CONFIGSFILE=${SCRIPTPATH}"/configs/schaeffler_multiview.txt"
 ENVFILE="/home/venvs/torch_1.11.0_ema/bin/activate"
 
 
